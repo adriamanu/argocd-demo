@@ -6,7 +6,7 @@ metadata:
   name: abyss-app
   namespace: abyss
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: abyss-app
@@ -17,7 +17,7 @@ spec:
         app: abyss-app
     spec:
       containers:
-      - image: nginx
+      - image: nginx:1.21.4
         name: nginx
         resources: {}
 status: {}
