@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: abyss
+  namespace: argocd
+spec:
+  project: abyss
+
+  source:
+    repoURL: https://github.com/adriamanu/argocd-demo
+    targetRevision: HEAD
+    path: abyss
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: abyss
+  
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true # create ns if ns does not exists yet
+

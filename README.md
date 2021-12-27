@@ -1,8 +1,9 @@
 # ARGOCD DEMO
 
 This repository is meant to test ARGOCD features. <br>
-
 Integration has been done with `Github Application`. <br>
+
+## Github Application Credentials
 Here is a script that generate the command for argocd in order to add you repository thanks to your github application.
 
 ```ruby
@@ -41,4 +42,9 @@ data = JSON.parse(res.body)
 
 # Print argo command
 puts "argocd repo add " + REPO + " --github-app-id " + APPLICATION_ID + " --github-app-private-key-path " + FILEPATH + " --github-app-installation-id " + data[0]["id"].to_s
+```
+
+## Create Argo Application
+```bash
+kubectl apply -f application.yaml
 ```
