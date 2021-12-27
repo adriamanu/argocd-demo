@@ -44,7 +44,7 @@ data = JSON.parse(res.body)
 puts "argocd repo add " + REPO + " --github-app-id " + APPLICATION_ID + " --github-app-private-key-path " + FILEPATH + " --github-app-installation-id " + data[0]["id"].to_s
 ```
 
-## Create Argo Application
+## Create Argo Project and Application
 ```bash
-kubectl apply -f application.yaml
+k apply -f application.yaml -f project.yaml
 ```
