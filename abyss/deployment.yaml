@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: abyss-app
+  name: abyss-app
+  namespace: abyss
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: abyss-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: abyss-app
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

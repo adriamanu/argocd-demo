@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: abyss-svc
+  namespace: abyss
+spec:
+  selector:
+    app: abyss-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
