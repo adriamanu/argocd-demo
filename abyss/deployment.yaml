@@ -6,7 +6,7 @@ metadata:
   name: abyss-app
   namespace: abyss
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: abyss-app
