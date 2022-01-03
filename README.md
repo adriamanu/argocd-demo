@@ -10,7 +10,7 @@ If you need to install `kubectl` cli, here is the documentation : https://kubern
 If you need a kubernetes cluster, check out my repository : https://github.com/adriamanu/kube-ansible <br>
 
 ## Github Application Credentials
-Here is a script that generate the command for `argocd` cli in order to add your private repository thanks to your github application.
+Here is a **ruby** script that generate the command for `argocd` cli in order to add your private repository thanks to your github application.
 
 ```ruby
 require 'jwt'  # https://rubygems.org/gems/jwt
