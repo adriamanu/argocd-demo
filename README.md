@@ -2,9 +2,15 @@
 
 This repository is meant to test ARGOCD features. <br>
 Integration has been done with `Github Application`. <br>
+Ensure that you have `kubectl` and `argocd` cli. <br>
+
+If you need to install `argocd` cli, here is the documentation : https://argo-cd.readthedocs.io/en/stable/cli_installation/ <br>
+If you need to install `kubectl` cli, here is the documentation : https://kubernetes.io/docs/tasks/tools/install-kubectl/ <br>
+
+If you need a kubernetes cluster, check out my repository : https://github.com/adriamanu/kube-ansible <br>
 
 ## Github Application Credentials
-Here is a script that generate the command for argocd in order to add you repository thanks to your github application.
+Here is a script that generate the command for `argocd` cli in order to add your private repository thanks to your github application.
 
 ```ruby
 require 'jwt'  # https://rubygems.org/gems/jwt
@@ -46,5 +52,5 @@ puts "argocd repo add " + REPO + " --github-app-id " + APPLICATION_ID + " --gith
 
 ## Create Argo Project and Application
 ```bash
-k apply -f application.yaml -f project.yaml
+kubectl apply -f application.yaml -f project.yaml
 ```
